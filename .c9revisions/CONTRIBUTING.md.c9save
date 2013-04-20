@@ -1,0 +1,11 @@
+{"ts":1366423203625,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"Contributing\n============\n\nHere's how to contribute to this project:\n\nFork the repo.\n\nPush to your fork and submit a pull request.\n"]],"start1":0,"start2":0,"length1":0,"length2":131}]],"length":131}
+{"contributors":["rubiojan@gmail.com"],"silentsave":false,"ts":1366423804052,"patch":[[{"diffs":[[0,"t:\n\n"],[-1,"Fork the repo.\n\nPush to your fork and submit a pull request."],[1,"* Sign up for a Cloude9 IDE account\n* Go to https://c9.io/heyitsolivia/mars-watchtower and make changes"],[0,"\n"]],"start1":66,"start2":66,"length1":65,"length2":108}]],"length":174,"saved":false}
+{"ts":1366424187707,"patch":[[{"diffs":[[0,"changes\n"],[1,"sdf"]],"start1":166,"start2":166,"length1":8,"length2":11}]],"length":177,"saved":false}
+{"ts":1366424192582,"patch":[[{"diffs":[[0,"nges\nsdf"],[1," cool hello ther :)"]],"start1":169,"start2":169,"length1":8,"length2":27}]],"length":196,"saved":false}
+{"ts":1366424195376,"patch":[[{"diffs":[[0," ther :)"],[1," how are you doing"]],"start1":188,"start2":188,"length1":8,"length2":26}]],"length":214,"saved":false}
+{"ts":1366424198539,"patch":[[{"diffs":[[0," :) "],[-1,"how are you doing"]],"start1":193,"start2":193,"length1":21,"length2":4}]],"length":197,"saved":false}
+{"ts":1366424200936,"patch":[[{"diffs":[[0,"cool"],[-1," hello ther :) "]],"start1":178,"start2":178,"length1":19,"length2":4}]],"length":182,"saved":false}
+{"ts":1366424201842,"patch":[[{"diffs":[[0,"\nsdf"],[-1," cool"]],"start1":173,"start2":173,"length1":9,"length2":4}]],"length":177,"saved":false}
+{"ts":1366424202705,"patch":[[{"diffs":[[0,"ges\n"],[-1,"sdf"]],"start1":170,"start2":170,"length1":7,"length2":4}]],"length":174,"saved":false}
+{"ts":1366424203954,"patch":[[{"diffs":[[0,"changes\n"],[1,"*"]],"start1":166,"start2":166,"length1":8,"length2":9}]],"length":175,"saved":false}
+{"ts":1366424204727,"patch":[[{"diffs":[[0,"changes\n"],[-1,"*"]],"start1":166,"start2":166,"length1":9,"length2":8}]],"length":174,"saved":false}
