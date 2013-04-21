@@ -1,7 +1,33 @@
-doctype 5
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html.no-js(lang='en')
+    //<![end if]
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        title=title
+        meta(name="description", content=description)
+        meta(name="author", content=author)
+        meta(name="viewport", content='width=device-width, initial-scale=1')
+        
+        link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic")
+        link(rel="stylesheet", href="/stylesheets/fonts.css")
+        link(rel="stylesheet", href="/stylesheets/reset.css")        
+        link(rel="stylesheet", href="/stylesheets/foundation.min.css")
+        
+        link(rel="stylesheet/less", href="/stylesheets/screen.less")
+        
+        script(src='//rawgithub.com/cloudhead/less.js/master/dist/less-1.3.3.min.js')
+        script(src='//rawgithub.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js')
+        script(src="/javascripts/foundation/modernizr.foundation.js")
+
+    body
+        block header
+        block content
+        block pre-footer
+        block footer
+            footer
+                script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+                script
+                    window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\\/script>')
+                script(defer, src='/javascripts/foundation/foundation.min.js')
+                script(defer, src='/javascripts/app.js')
+                script(defer, src='/javascripts/main.js')

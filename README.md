@@ -1,7 +1,7 @@
-mars-watchtower
+Mars Watchtower
 ===============
 
-Mars Watchtower project to solve a challenge posed by The International Space Apps Challenge.
+Mars Watchtower is a hackathon project to solve a challenge posed by The International Space Apps Challenge. #wishyouwerehere
 
 Hey guys! We're going to be tackling the Wish You Were Here challenge collaboratively as a team, the goal of which is to develop a compelling representation of weather on Mars. (http://spaceappschallenge.org/challenge/wish-you-were-here/)
 
