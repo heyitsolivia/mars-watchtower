@@ -328,7 +328,7 @@ $(function() {
      */
     
     var minSol = 1,
-        maxSol = 2,
+        maxSol = 13,
         sol, requests = [], sols = [], allReports = [];
      
     for (sol = minSol; sol < maxSol; sol++) {
