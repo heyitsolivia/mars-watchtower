@@ -1,13 +1,43 @@
 extends layout
 
 block content
-    div.topButtonContainer
-        span.topButton.icon-geomicon-253 *
-        span.topButton *
-    h1.title MARS WATCHTOWER
-    div.currentDate
-        span.month
-        span.day
-        span.year
-    div.marsDate
+    .header
+        h1 MARS WATCHTOWER
+    nav
+        a.icon-geomicon-091.btn(data-button="temp")  
+        a.icon-geomicon-087.btn(data-button="wind")  
+        a.icon-geomicon-187.btn(data-button="pressure")   
+        a.icon-geomicon-134.btn(data-button="people") 
+        a.icon-geomicon-133(data-button="unit")            
+        a.icon-geomicon-240(data-button="info", data-reveal-id="info")
     
+
+
+
+   
+    .marsDate
+    .currentDate
+    .dataContainer(data-units="0")
+        .peopleDiv.item(data-button="people")
+            span.popCount 0
+            span.popString Humans (So Far)
+        .pressureDiv.item(data-button="pressure")
+        .windDiv.item(data-button="wind")
+        .tempDiv.item(data-button="temp")
+    .tempGraph.item(data-button="temp")
+    .report-timeline
+        select#timeline
+
+    #info.reveal-modal.large
+        h2 Mars Watchtower
+        p Hey there! This project was built for the 2013 International Space Apps Challenge hackathon to solve the #wishyouwerehere challenge. Use this interactive app to explore the most recent Mars weather data from REMS (Rover Environmental Monitoring Station on the Curiosity rover.)
+        p Contributors: 
+            a(href="https://twitter.com/heyits0livia") @heyits0livia, 
+            a(href="https://github.com/janrubio") Jan Rubio, 
+            a(href="https://twitter.com/ArnaudSchenk") @ArnaudSchenk, 
+            a(href="https://twitter.com/FransRamirez06") @FransRameriez, 
+            a(href="https://github.com/Joshua-S") Joshua S. 
+        p Photo Credit: "Daybreak at Gale Crater" Courtesy NASA/JPL-Caltech.
+        p
+            a(href="http://spaceappschallenge.org/project/mars-watchtower/") Link to Project Page
+        a.close-reveal-modal &#215;

@@ -53,7 +53,7 @@ exports.historical = function(req, res) {
     var options = {
         host: 'marsweather.ingenology.com',
         port: 80,
-        path: '/v1/archive/?sol=' + query['sol']
+        path: '/v1/archive/?page=' + query['page'] + '&format=json'
     };
     
     exports.getJSON(options, function(statusCode, result) {

@@ -1,0 +1,44 @@
+#timeline {
+    display: none;
+}
+
+#slider {
+    background: none;
+    border-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    height: 0;
+    box-sizing: border-box;
+    margin: 0 2em;
+    
+    .ui-slider-handle {
+        cursor: col-resize;
+        border-radius: 2em;
+        top: -.56em;
+        transition: left .3s ease;
+        -moz-transition: left .3s ease;
+        -webkit-transition: left .3s ease;
+        -o-transition: left .3s ease;
+        
+        &:after {
+            color: #fff;
+            content: attr(data-content);
+            position: absolute;
+            top: -25px;
+            left: -16px;
+            width: 50px;
+            font-size: 10px;
+        }
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.report-timeline {
+    background: rgba(0, 0, 0, .5);
+    padding-top: 3em;
+    position: absolute;
+    height: 6em;
+    bottom: 0;
+    width: 100%;
+}

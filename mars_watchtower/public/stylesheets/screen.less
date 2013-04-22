@@ -1,140 +1,239 @@
+/* Join the chat http://zippychat.com/room/xisev */
+
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
+:: Variables
 :: Shared Styles
-:: Menu
+:: Header
 :: Footer
+:: Module: Earth and Mars Date
+:: New Section
 */
 
 /* -----------------------------------------
    Variables
 ----------------------------------------- */
+
+    // Colors
+    
     @white: #ffffff;
+    @white75: rgba(255,255,255,.75);
     @white50: rgba(255,255,255,.5);
     @white25: rgba(255,255,255,.25);
     @white10:rgba(255,255,255,.1);
     
-    @black: #000000;
+    @black: #444;
     @black50: rgba(0,0,0,.5);
-
+    
+    // Typography
+    @font: 'Noto Sans', sans-serif;
+    @small: 10px;
+    @default: 20px; 
+    @display: 50px;
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
 
-/* Join the chat http://zippychat.com/room/xisev */
-
-
 body {
-    font-family: 'Noto Sans';
-    background: #333 url('http://www.jpl.nasa.gov/images/mer/2010-11-18/pia13593-atc-4x3.jpg');
+    font-family: @font;
+    font-size: @default;
+    color: @white;
+    background: #333 url('/images/mars-PIA14293.jpg');    
+    // background: #333 url('http://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA14293-1920x1200.jpg');
     background-size: cover;
-    color: @white; 
 }
 
 /* -----------------------------------------
-   Menu
+   Header
 ----------------------------------------- */
-.title {    
-    font-family: 'Noto Sans';
-    font-weight: normal;
-    font-size: 25px;
-    padding-left: 50px;
-    margin: 30px 0px 0px 0px;
+.header {
+    width: 100%;
+    padding: 1em 2em;
+    overflow: auto;
+    border-bottom: 1px solid @white10;
+
+    h1 {    
+        font-family: @font;
+        font-weight: normal;
+        font-size: @default;
+        color: @white;
+        float: left;
+        margin: .4em 0;
+    }
+}
+nav {
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 1em 1.4em;    
+    a {
+    font-size: 1.5em;
+    margin-left: .5em;
+    color: @white25;
+    transition: color 200ms ease;
+    cursor: pointer;
+    position: relative;
+    }
+    a:hover {
+        color: @white50;
+    }
+    a.active {
+        color: @white;
+    }    
+    a.icon-geomicon-134{
+        border-right: 1px dotted @white25;
+        padding-right: .25em;
+    }    
+    a:hover:after{
+        font-size: .35em;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: -3em;
+    }
+    a.icon-geomicon-091:hover:after{
+        content: "Temp";
+        left: 3px;
+    }
+    a.icon-geomicon-087:hover:after{
+        content: "Wind";
+        left: 1px;
+    }
+    a.icon-geomicon-187:hover:after{
+        content: "Pressure";
+        left: -12px;
+    }        
+    a.icon-geomicon-134:hover:after{
+        content: "Population";
+        left: -18px;
+    }
+    a.icon-geomicon-133:hover:after{
+        content: "Switch\00A0Units";
+        left: -25px;
+    }
+    a.icon-geomicon-133:active{
+        color: @white;
+    }    
+    a.icon-geomicon-133:active:after{
+        content: "Switch\00A0Units";
+        left: -25px;
+    }    
+    a.icon-geomicon-240:hover:after{
+        content: "Info";
+        left: 3px;
+    }        
+
 }
 
+/* -----------------------------------------
+   Module: Earth and Mars Date
+----------------------------------------- */
+
+.marsDate{
+    font-size: @display;
+    padding-left: 25px;
+    color: @white50;
+    margin: .25em 0;
+}
 .currentDate {    
-    font-family: 'Noto Sans';
-    font-weight: normal;
-    font-size: 50px;
-    padding-left: 47px;
-    opacity: .7;
-    margin-top: 0px;
+    font-size: @default;
+    color: @white50;
+    padding-left: 25px;
+    margin-top: 0;
 }
 
-/* Buttons */
-.topButton {
-    font-size: 100px;
-    // font-family: 'UI Icon';
-    opacity: .7;
+
+/* -----------------------------------------
+   Module: Data
+------------------------------------------*/
+
+.dataContainer {
+    text-align: right;
+    margin: 0 10px;
     
-    transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -webkit-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
+    > div {
+        display: inline-block;
+        height: 150px;
+        padding: 1em;
+        font-size: @display;
+        vertical-align: top;
+    }
+    
+    > div + div {
+        border-left: 1px solid @white25;        
+    }
 }
 
-.topButton.active {
-    opacity: 1;
-}
+/* -----------------------------------------
+   Module: Temperature
+----------------------------------------- */
 
-/* Next two selectors are for the horizontal date scroller */ 
-.dateContainerExterior{
-    height: 50px;
-    width: 300px;
-    
-    position: relative;
-    float: right;
-    top: 50px;
-    right: 50px;
-    
-    -webkit-box-shadow: 0px 0px 8px 2px #555;
-    -moz-box-shadow: 0px 0px 8px 2px #555;
-    box-shadow: 0px 0px 8px 2px #555;
-    
-    background:white;
-    padding:15px;
-    margin-bottom: 4px;
-    
-    overflow-x:scroll;
-    
-    
-}
-.dateContainerInterior{
-    height:100%;
-    width:500px;
-    
-   
-}
-.weatherDataContainer{
-    height: 500px;
-    width: 300px;
-    
-    position: relative;
-    float: right;
-    top: 50px;
-    right: 50px;
-    clear: right;
-    
-    
-    -webkit-box-shadow: 0px 0px 8px 2px #555;
-    -moz-box-shadow: 0px 0px 8px 2px #555;
-	box-shadow: 0px 0px 8px 2px #555;
-    
-    background:white;
-    padding:7px;
-    
-}
+    .minTemp{
+        display: block;
+        font-size: @default;
+        color: @white50;
+        margin: 1em 0;
+    }
+    .avgTemp{
+        display: block;
+    }
+    .maxTemp{
+        display: block;
+        font-size: @default;
+        color: @white50;
+        position: relative;
+        top: -5em;
+    }    
 
-.report {
-    height:100%;
-    width:70px;
+/* -----------------------------------------
+   Module: Wind
+----------------------------------------- */
+
+    .windSpeed {
+        font-size: @display;        
+    }
+    .windDirection {
+        display: block;
+        font-size: @default;
+        text-transform: uppercase;
+        color: @white50;
+    }
+
+/* -----------------------------------------
+   Module: Pressure
+----------------------------------------- */
+
+    .pressure {
+        font-size: @display;
+    }
+    .pressureString {
+        font-size: @default;
+        text-transform: uppercase;
+        color: @white50;
+    }
     
-    display:inline-block;
-}
-.terrestrialDate{
-    height:50px;
-    width:100%;
-    
-    text-align:center;
-    font-size:30px;
-    
-    border:solid;
-}
-.sol{
-    display:inline-block;
-}
-.ls{
-    padding-left:3px;
-    
-    display:inline-block;
-}
+/* -----------------------------------------
+   Module: Population
+----------------------------------------- */
+
+    .popCount {
+        font-size: @display;
+    }
+    .popString {
+        display: block;
+        font-size: @default;
+        text-transform: uppercase;
+        color: @white50;
+    }    
+
+/* -----------------------------------------
+   Info
+----------------------------------------- */
+
+    #info{
+        font-family: @font;
+        color: @black;
+        h2{
+            font-weight: normal;
+        }
+    }

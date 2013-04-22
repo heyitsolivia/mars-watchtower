@@ -12,22 +12,30 @@ html.no-js(lang='en')
         link(rel="stylesheet", href="/stylesheets/fonts.css")
         link(rel="stylesheet", href="/stylesheets/reset.css")        
         link(rel="stylesheet", href="/stylesheets/foundation.min.css")
+        link(rel="stylesheet", href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css")
         
         link(rel="stylesheet/less", href="/stylesheets/screen.less")
-        
-        script(src='//rawgithub.com/cloudhead/less.js/master/dist/less-1.3.3.min.js')
-        script(src='//rawgithub.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js')
-        script(src="/javascripts/foundation/modernizr.foundation.js")
-
+        link(rel="stylesheet/less", href="/stylesheets/graph.less")
+        link(rel="stylesheet/less", href="/stylesheets/timeline.less")
     body
         block header
         block content
         block pre-footer
         block footer
             footer
-                script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+                script(src='//rawgithub.com/cloudhead/less.js/master/dist/less-1.3.3.min.js')
+                script(src='//rawgithub.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js')
+                script(src='//d3js.org/d3.v3.min.js')
+                script(src="/javascripts/foundation/modernizr.foundation.js")
+                script(src='/javascripts/foundation/foundation.min.js')
                 script
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                    ga('create', 'UA-40323587-1', 'herokuapp.com');
+                    ga('send', 'pageview');
                     window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\\/script>')
-                script(defer, src='/javascripts/foundation/foundation.min.js')
+                script(src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js')
                 script(defer, src='/javascripts/app.js')
                 script(defer, src='/javascripts/main.js')
